@@ -6,12 +6,18 @@ public class Automovel implements AlugaveisInt {
 	  private String placa;
 	  private int ano; // Ano de fabricacao
 	  private Classificacao classificacao;
+	  
+	  public static final int BASICO = 1;
+	  public static final int FAMILIA = 2;
+	  public static final int LUXO = 3;
 
-	  public Automovel(String descricao, int ano, String placa, Classificacao classificacao) {
+
+	  public Automovel(String descricao, int ano, String placa, int codigoDoPreco) {
 	    this.descricao = descricao;
 	    this.placa = placa;
 	    this.ano = ano;
-		this.classificacao = classificacao;
+		this.setCodigoDoPreco(codigoDoPreco);
+
 	  }
 	 
 	  public String getDescricao() {
@@ -26,28 +32,11 @@ public class Automovel implements AlugaveisInt {
 	    return ano;
 	  }
 	 
-	  public int getCodigoDoPreco() {
-	      return this.classificacao.getCodigoDoPreco();
-	  }
+	
 
-		public int setCodigoDoPreco(Classificacao classificacao) {
-
-			switch (classificacao) {
-				case Familia:
-					return new Familia();
-				case Luxo:
-					return new Familia()
-				case Basico:
-					return new Familia()
-				
-					break;
-			
-				default:
-					break;
-			}
-	      return this.classificacao = new Classificacao() {
-			
-		  };
+		public void setCodigoDoPreco(int codigoDoPreco ) {
+			Fabrica fabrica = new Fabrica();
+			this.classificacao = fabrica.create(codigoDoPreco);
 	  }
 	
 

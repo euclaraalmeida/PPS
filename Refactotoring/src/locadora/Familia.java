@@ -11,6 +11,4 @@ public class Familia extends Classificacao{
         return dias_alugados * 130;
     }
 
-    @Override
-    public int getPontosDeAlugadorFrequente(int diasAlugado) { return 1; }
 }

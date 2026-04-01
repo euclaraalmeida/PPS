@@ -12,7 +12,5 @@ public class Basico  extends Classificacao{
         return dias_alugados * 90.0;
     }
 
-    @Override
-    public int getPontosDeAlugadorFrequente(int diasAlugado) { return 1; }
-
+    
 }

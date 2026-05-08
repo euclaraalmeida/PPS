@@ -1,4 +1,3 @@
-package decorator;
 
 // Componente concreto
 public class Mocha extends AdicionalHandler {
